@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Quiz</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <body>
+    <header id="intro">
+      <p>
+        <strong style="font-size: 40px;">How to Play:</strong> <br>
+        <br>
+        <br>
+        <strong>1. </strong>Click on the "Start Quiz" button to begin.<br>
+        <br>
+        <strong>2. </strong>Answer each question by clicking on the corresponding button with your chosen answer.<br>
+        <br>
+        <strong>3. </strong>Be mindful of the timer, as incorrect answers result in a time penalty.<br>
+        <br>
+        <strong>4. </strong>After completing the quiz, enter your initials to save your score on the highscores list.<br>
+        <br>
+      </p>
+      <button id="start-btn" class="enter">Start Quiz</button>
+    </header>
+
+    <main id="main" class="app">
+      <h1>Code Quiz</h1>
+      <div id="questions">
+        <div class="quiz">
+          <h2 id="question">Question goes here</h2>
+          <strong><p id="timer">Time:</strong> <span id="timer-display">0</span> seconds</p>
+        </div>
+
+        <div id="answer-buttons">
+          <button class="btn">Answer 1</button>
+          <button class="btn">Answer 2</button>
+          <button class="btn">Answer 3</button>
+          <button class="btn">Answer 4</button>
+        </div>
+      </div>
+      <button id="next-btn" class="btn">Next</button>
+      <div id="end-screen">
+        <h2>Your Score: <span id="score">0</span></h2>
+        <label class="score">Enter Initials:</label><br />
+        <input
+          type="text"
+          id="initials"
+          placeholder="Your initials go here..."
+        />
+        <button id="save-btn" class="btn">Submit</button>
+        <button id="highscores-btn" class="btn" style="display: none">
+          Show Highscores
+        </button>
+      </div>
+    </main>
+    <section id="highscores-section" style="display: none">
+      <h1>Highscores</h1>
+      <ul id="highscores-list"></ul>
+      <button id="go-back-btn" class="btn">Go Back</button>
+      <button id="clear-btn" class="btn">Clear Highscores</button>
+    </section>
+
+    <script src="./script.js"></script>
+    <script src="./highscores.js"></script>
+  </body>
+</html>
