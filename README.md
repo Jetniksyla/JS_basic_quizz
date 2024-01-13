@@ -41,3 +41,5 @@ For inquiries, feedback, or collaboration opportunities, feel free to reach out 
 Are you ready to dive into the world of JavaScript? Click "Start Quiz" and test your skills! Have fun and good luck!
 
 ## Project Screenshot
+
+![Alt text](assets/quiz.sc.html.png)
