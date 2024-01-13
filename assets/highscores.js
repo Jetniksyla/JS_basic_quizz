@@ -1,3 +1,4 @@
+// DOM elements for highscores section
 const highscoresButton = document.getElementById("highscores-btn");
 const goBackButton = document.getElementById("go-back-btn");
 const clearButton = document.getElementById("clear-btn");
@@ -13,6 +14,7 @@ goBackButton.addEventListener("click", goBackToQuiz);
 // Event listener for "Clear Highscores" button
 clearButton.addEventListener("click", clearHighscores);
 
+// Function to show highscores
 function showHighscores() {
   // Display the highscores section
   document.getElementById("main").style.display = "none";
@@ -22,6 +24,7 @@ function showHighscores() {
   displayHighscores();
 }
 
+// Function to go back to the quiz from highscores section
 function goBackToQuiz() {
   // Hide the highscores section and display the main quiz
   document.getElementById("intro").style.display = "block";
@@ -30,6 +33,7 @@ function goBackToQuiz() {
   highscoresSection.style.display = "none";
 }
 
+// Function to clear highscores
 function clearHighscores() {
   // Clear highscores from localStorage
   localStorage.removeItem("highscores");
@@ -38,6 +42,7 @@ function clearHighscores() {
   highscoresList.innerHTML = "";
 }
 
+// Function to generate a random color for styling highscores
 function getRandomColor() {
   const letters = "0123456789ABCDEF";
   let color = "#";
@@ -47,6 +52,7 @@ function getRandomColor() {
   return color;
 }
 
+// Function to display highscores
 function displayHighscores() {
   // Retrieve highscores from localStorage
   const highscores = getHighscores();
@@ -57,12 +63,14 @@ function displayHighscores() {
     const listItem = document.createElement("li");
     listItem.innerHTML = `ID_${score.initials}&nbsp;&nbsp;&nbsp;&nbsp;Score: ${score.score}`;
 
+    // Apply a random color to each highscore entry
     listItem.style.color = getRandomColor();
 
     highscoresList.appendChild(listItem);
   });
 }
 
+// Function to retrieve highscores from localStorage
 function getHighscores() {
   // Retrieve highscores from localStorage
   const storedHighscores = localStorage.getItem("highscores");
@@ -71,6 +79,7 @@ function getHighscores() {
   return storedHighscores ? JSON.parse(storedHighscores) : [];
 }
 
+// Function to save the current score and initials to highscores
 function saveHighscore() {
   // Get user's initials
   const initials = initialsInput.value.trim();
@@ -85,13 +94,14 @@ function saveHighscore() {
   localStorage.setItem("highscores", JSON.stringify(highscores));
 }
 
-// Modify your existing "Submit" button event listener
+// Event listener for the "Submit" button to save highscores
 saveButton.addEventListener("click", () => {
   const initials = initialsInput.value.trim();
   if (initials !== "") {
     saveHighscore();
     // Log the saved initials and score for testing
     console.log("Saved: ", initials, score);
+    // Hide the submit button and display the highscores button
     document.getElementById("save-btn").style.display = "none";
     document.getElementById("highscores-btn").style.display = "block";
   }

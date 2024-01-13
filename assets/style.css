@@ -1,3 +1,4 @@
+/* Resetting default margin, padding, font-family, and box-sizing */
 * {
   margin: 0;
   padding: 0;
@@ -5,10 +6,12 @@
   box-sizing: border-box;
 }
 
+/* Body styling */
 body {
   background-color: #001e4d;
 }
 
+/* Styling for the main application container */
 .app {
   background-color: white;
   width: 90%;
@@ -18,6 +21,7 @@ body {
   padding: 30px;
 }
 
+/* Styling for the main heading */
 .app h1 {
   font-size: 25px;
   color: #001e4d;
@@ -26,29 +30,35 @@ body {
   padding-bottom: 30px;
 }
 
+/* Hide main content initially */
 #main {
   display: none;
 }
 
+/* Styling for quiz section */
 .quiz {
   display: none;
   padding: 15px 20px 0;
 }
 
+/* Styling for paragraphs in the main section */
 #main p {
   margin: 10px 0;
 }
 
+/* Styling for specific spans within paragraphs */
 #main p span {
   color: red;
 }
 
+/* Styling for quiz question heading */
 .quiz h2 {
   font-size: 18px;
   color: #001e4d;
   font-weight: 600;
 }
 
+/* General button styling */
 .btn {
   background-color: white;
   color: #222;
@@ -64,15 +74,18 @@ body {
   font-size: 15px;
 }
 
+/* Button hover effect */
 .btn:hover:not([disabled]) {
   background: #222;
   color: white;
 }
 
+/* Disabled button styling */
 .btn:disabled {
   cursor: no-drop;
 }
 
+/* Styling for specific buttons */
 #next-btn,
 #start-btn {
   background: #001e4d;
@@ -87,24 +100,28 @@ body {
   text-align: center;
 }
 
+/* Initially hide next button */
 #next-btn {
   display: none;
 }
 
+/* Styling for correct answer */
 .correct {
   background: #9aeabc;
 }
 
+/* Styling for incorrect answer */
 .incorrect {
   background: #ff9393;
 }
 
-
+/* Styling for end screen section */
 #end-screen,
 #end-screen h2 {
   padding: 15px 0;
 }
 
+/* Styling for input in end screen */
 #end-screen input {
   width: 100%;
   padding: 10px;
@@ -113,10 +130,12 @@ body {
   font-size: medium;
 }
 
+/* Styling for score label */
 .score {
   padding-block-start: 10px;
 }
 
+/* Styling for save button */
 #save-btn {
   background: black;
   color: white;
@@ -126,18 +145,13 @@ body {
   margin-block-start: 20px;
 }
 
+/* Styling for introduction section */
 #intro {
   display: block;
-}
-
-.quiz {
-  display: none;
-}
-
-#intro {
   margin: 60px;
 }
 
+/* Styling for paragraphs in introduction */
 #intro p {
   font-family: sans-serif;
   width: 80%;
@@ -151,6 +165,7 @@ body {
   border-radius: 20px;
 }
 
+/* Styling for start quiz button in introduction */
 #intro button {
   width: 35%;
   border-radius: 30px;
@@ -162,15 +177,15 @@ body {
   border: 1px solid red;
 }
 
+/* Focus and hover styles for start quiz button */
 #intro button:focus-visible,
 #intro button:hover {
   outline: 1px solid red;
   outline-offset: 2px;
-  /* Optional: Adjust the outline offset as needed */
   transition: 0.2s;
 }
 
-
+/* Styling for highscores section */
 #highscores-section h1,
 #highscores-list,
 #go-back-btn,
@@ -190,6 +205,7 @@ body {
   padding: 30px;
 }
 
+/* Styling for buttons in highscores section */
 #highscores-section button {
   border: 1px solid #ff000054;
   padding: 20px;
@@ -197,17 +213,20 @@ body {
   border-radius: 20px;
 }
 
+/* Hover effect for buttons in highscores section */
 #highscores-section button:hover {
   background: #6d5151;
   color: white;
 }
 
+/* Styling for highscores button */
 #highscores-btn {
   color: white;
   background: black;
   text-align: center;
 }
 
+/* Styling for highscores list */
 #highscores-list {
   color: #ff9393;
   cursor: auto;
@@ -215,6 +234,7 @@ body {
   list-style-type: auto;
 }
 
+/* Styling for highscores section heading */
 #highscores-section h1 {
   width: 70%;
   margin-block-start: 5%;

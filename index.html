@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Meta tags for character set and viewport settings -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Clear and descriptive title for the webpage -->
     <title>JavaScript Quiz</title>
+    <!-- Link to an external stylesheet for better presentation -->
     <link rel="stylesheet" href="./assets/style.css" />
   </head>
   <body>
+    <!-- Header Section -->
     <header id="intro">
       <p>
+        <!-- Instructions for playing the quiz -->
         <strong style="font-size: 40px;">How to Play:</strong> <br>
         <br>
         <br>
@@ -21,47 +26,64 @@
         <strong>4. </strong>After completing the quiz, enter your initials to save your score on the highscores list.<br>
         <br>
       </p>
+      <!-- Button to start the quiz -->
       <button id="start-btn" class="enter">Start Quiz</button>
     </header>
 
+    <!-- Main Section -->
     <main id="main" class="app">
+      <!-- Main heading -->
       <h1>Code Quiz</h1>
-      <div id="questions">
+      <!-- Section for quiz questions -->
+      <section id="questions">
         <div class="quiz">
+          <!-- Placeholder for the question, to be updated dynamically -->
           <h2 id="question">Question goes here</h2>
+          <!-- Timer display -->
           <strong><p id="timer">Time:</strong> <span id="timer-display">0</span> seconds</p>
         </div>
-
-        <div id="answer-buttons">
+        <!-- Section for answer buttons -->
+        <section id="answer-buttons">
+          <!-- Answer buttons, to be populated dynamically -->
           <button class="btn">Answer 1</button>
           <button class="btn">Answer 2</button>
           <button class="btn">Answer 3</button>
           <button class="btn">Answer 4</button>
-        </div>
-      </div>
+        </section>
+      </section>
+      <!-- Button to proceed to the next question -->
       <button id="next-btn" class="btn">Next</button>
-      <div id="end-screen">
+      <!-- Section for end screen, displaying score and allowing submission -->
+      <section id="end-screen">
         <h2>Your Score: <span id="score">0</span></h2>
         <label class="score">Enter Initials:</label><br />
+        <!-- Input field for entering initials -->
         <input
           type="text"
           id="initials"
           placeholder="Your initials go here..."
         />
+        <!-- Button to submit the score -->
         <button id="save-btn" class="btn">Submit</button>
+        <!-- Button to show highscores (initially hidden) -->
         <button id="highscores-btn" class="btn" style="display: none">
           Show Highscores
         </button>
-      </div>
+      </section>
     </main>
-    <section id="highscores-section" style="display: none">
+    <!-- Footer Section for Highscores -->
+    <footer id="highscores-section" style="display: none">
       <h1>Highscores</h1>
+      <!-- List for displaying highscores -->
       <ul id="highscores-list"></ul>
+      <!-- Buttons to navigate back or clear highscores -->
       <button id="go-back-btn" class="btn">Go Back</button>
       <button id="clear-btn" class="btn">Clear Highscores</button>
-    </section>
+    </footer>
 
-    <script src="./script.js"></script>
-    <script src="./highscores.js"></script>
+    <!-- Script tag for linking JavaScript file -->
+    <script src="assets/script.js"></script>
+    <!-- Script tag for linking highscore file -->
+    <script src="assets/highscores.js"></script>
   </body>
 </html>

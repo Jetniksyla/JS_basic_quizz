@@ -1,3 +1,4 @@
+// DOM elements
 const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons");
 const timerDisplay = document.getElementById("timer-display");
@@ -8,6 +9,7 @@ const scoreElement = document.getElementById("score");
 const saveButton = document.getElementById("save-btn");
 const initialsInput = document.getElementById("initials");
 
+// Array of quiz questions
 const questions = [
   // JavaScript Basics
   {
@@ -67,11 +69,13 @@ const questions = [
   },
 ];
 
+// Quiz state variables
 let currentQuestionIndex = 0;
 let score = 0;
 let timerDuration = 60;
 let timer;
 
+// Function to start the quiz
 function startQuiz() {
   currentQuestionIndex = 0;
   score = 0;
@@ -83,6 +87,7 @@ function startQuiz() {
   startTimer();
 }
 
+// Function to start the timer
 function startTimer() {
   timer = setInterval(function () {
     timerDuration--;
@@ -94,6 +99,7 @@ function startTimer() {
   showQuestion();
 }
 
+// Function to display the current question
 function showQuestion() {
   resetState();
   let currentQuestion = questions[currentQuestionIndex];
@@ -114,23 +120,24 @@ function showQuestion() {
   });
 }
 
+// Function to reset the state for a new question
 function resetState() {
   while (answerButtons.firstChild) {
     answerButtons.removeChild(answerButtons.firstChild);
   }
 }
 
+// Function to handle user selection of an answer
 function selectAnswer(event) {
   const selectBtn = event.target;
   const isCorrect = selectBtn.dataset.correct === "true";
-  console.log("a");
   if (isCorrect) {
     selectBtn.classList.add("correct");
     score++;
   } else {
     selectBtn.classList.add("incorrect");
 
-    timerDuration -= 60;
+    timerDuration -= 15;
     if (timerDuration < 0) {
       timerDuration = 0;
     }
@@ -142,12 +149,14 @@ function selectAnswer(event) {
   }, 1000);
 }
 
+// Function to disable buttons after an answer is selected
 function disableButtons() {
   Array.from(answerButtons.children).forEach((button) => {
     button.disabled = true;
   });
 }
 
+// Function to handle moving to the next question
 function handleNextQuestion() {
   currentQuestionIndex++;
   if (currentQuestionIndex < questions.length) {
@@ -157,6 +166,7 @@ function handleNextQuestion() {
   }
 }
 
+// Function to end the quiz
 function endQuiz() {
   clearInterval(timer);
   questionElement.innerHTML = "";
@@ -167,4 +177,5 @@ function endQuiz() {
   document.getElementById("questions").style.display = "none";
 }
 
+// Event listener for starting the quiz
 startButton.addEventListener("click", startQuiz);
