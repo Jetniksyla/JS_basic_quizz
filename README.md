@@ -34,7 +34,7 @@ Welcome to the JavaScript Quiz! This interactive web-based quiz challenges your 
 
 ## Enjoy the Challenge!
 
-Are you ready to dive into the world of JavaScript? Click "Start Quiz" and test your skills! Have fun and good luck!
+Are you ready to dive into the world of JavaScript? Click ["Start Quiz"](https://jetniksyla.github.io/JS_basic_quizz/) and test your skills! Have fun and good luck!
 
 ## Project Screenshot
 
