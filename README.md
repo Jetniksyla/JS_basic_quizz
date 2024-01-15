@@ -25,7 +25,7 @@ Welcome to the JavaScript Quiz! This interactive web-based quiz challenges your 
 - **style.css:** External stylesheet for styling the web page.
 - **script.js:** JavaScript files with functions for quiz logic.
 
-## Author & ## Contact
+## Contact
 
 - **Jetnik Syla**
   - Email: sjetnik@gmail.com

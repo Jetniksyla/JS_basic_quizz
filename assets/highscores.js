@@ -61,7 +61,7 @@ function displayHighscores() {
   highscoresList.innerHTML = "";
   highscores.forEach((score) => {
     const listItem = document.createElement("li");
-    listItem.innerHTML = `ID_${score.initials}&nbsp;&nbsp;&nbsp;&nbsp;Score: ${score.score}`;
+    listItem.innerHTML = `.${score.initials}&nbsp;&nbsp;&nbsp;&nbsp;- ${score.score}`;
 
     // Apply a random color to each highscore entry
     listItem.style.color = getRandomColor();
