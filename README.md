@@ -25,16 +25,12 @@ Welcome to the JavaScript Quiz! This interactive web-based quiz challenges your 
 - **style.css:** External stylesheet for styling the web page.
 - **script.js:** JavaScript files with functions for quiz logic.
 
-## Author
+## Author & ## Contact
 
 - **Jetnik Syla**
   - Email: sjetnik@gmail.com
   - Phone: + (1) 914-415-9578
   - GitHub Profile: [Jetnik Syla](https://github.com/JetnikSyla)
-
-## Contact
-
-For inquiries, feedback, or collaboration opportunities, feel free to reach out to Jetnik Syla using the contact information provided.
 
 ## Enjoy the Challenge!
 
